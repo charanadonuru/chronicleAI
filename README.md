@@ -1,38 +1,18 @@
-# ChronicleAI
+ChronicleAI
+AI-powered Novel Title Generator using a Character-Level Neural Network
 
-> **AI-powered Novel Title Generator using a Character-Level Neural Network**
+ChronicleAI is a local AI-powered web application that generates creative novel titles using a character-level neural network trained on a curated dataset of fiction titles. Users can optionally provide a starting prefix, adjust the creativity of the generated titles through temperature sampling, compare different generation modes, and explore multiple title suggestions through a clean and responsive web interface.
+Demo
 
-ChronicleAI is a local AI-powered web application that generates creative novel titles using a **character-level neural network** trained on a curated dataset of fiction titles. Users can optionally provide a starting prefix, adjust the creativity of the generated titles through temperature sampling, compare different generation modes, and explore multiple title suggestions through a clean and responsive web interface.
-
----
-
-## Demo
-
-![ChronicleAI Demo](assets/demo.gif)
-
----
-
-## Getting Started
-
+Getting Started
 These instructions will help you set up ChronicleAI on your local machine for development and testing.
-
----
-
-## Prerequisites
-
+Prerequisites
 Install the following before running the application:
-
-- Python 3.10+
-- pip
-- Git
-
----
-
-## Installing
-
+Python 3.10+
+pip
+Git
+Installing
 Clone the repository:
-
-```bash
 git clone https://github.com/charanadonuru/chronicleAI.git
 cd chronicleAI
 Install the required packages:
@@ -67,21 +47,21 @@ Balanced: Natural balance between coherence and creativity
 Creative: More diverse and experimental outputs
 Project Structure
 chronicleAI/
-├── app.py
-├── model.py
-├── model.pt
-├── vocab.pt
-├── fiction_clean.txt
-├── templates/
-│   └── index.html
-├── static/
-│   ├── css/
-│   │   └── style.css
-│   └── js/
-│       └── main.js
-├── assets/
-│   └── demo.gif
-└── README.md
+app.py
+model.py
+model.pt
+vocab.pt
+fiction_clean.txt
+templates/
+templates/index.html
+static/
+static/css/
+static/css/style.css
+static/js/
+static/js/main.js
+assets/
+assets/demo.gif
+README.md
 Running the Application
 Start the Flask server:
 python app.py
