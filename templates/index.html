@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chronicleAI</title>
+    <!-- Modern Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta name="description" content="Generate novel titles instantly using the Makemore neural network.">
+</head>
+<body>
+    <div class="background-mesh"></div>
+    <div class="container">
+        <header>
+            <h1>chronicle<span class="gradient-text">AI</span></h1>
+        </header>
+
+        <main class="glass-panel">
+            <section class="controls-section">
+                <!-- Temperature Selection -->
+                <div class="control-group">
+                    <label>Creativity Mode (Temperature)</label>
+                    <div class="btn-group" id="temp-group">
+                        <button class="mode-btn" data-temp="0.5">Conservative</button>
+                        <button class="mode-btn active" data-temp="0.8">Balanced</button>
+                        <button class="mode-btn" data-temp="1.2">Creative</button>
+                    </div>
+                </div>
+
+                <!-- Number of Titles Selection -->
+                <div class="control-group">
+                    <label>Number of Titles</label>
+                    <div class="btn-group" id="count-group">
+                        <button class="count-btn active" data-count="5">5</button>
+                        <button class="count-btn" data-count="10">10</button>
+                        <button class="count-btn" data-count="20">20</button>
+                    </div>
+                </div>
+
+                <!-- Prefix Input -->
+                <div class="control-group">
+                    <label for="prefix">Starting Prefix (Optional)</label>
+                    <input type="text" id="prefix" placeholder="e.g., The Shadow, A, Beyond" autocomplete="off">
+                </div>
+            </section>
+
+            <section class="actions-section">
+                <button class="primary-btn generate-btn" id="generate-btn">
+                    <span class="btn-text">Generate Titles</span>
+                    <div class="spinner hidden"></div>
+                </button>
+                <button class="secondary-btn compare-btn" id="compare-btn">
+                    <span class="btn-text">Compare Modes</span>
+                    <div class="spinner hidden"></div>
+                </button>
+            </section>
+        </main>
+
+        <section class="results-section hidden" id="results-section">
+            <h2 id="results-header">Generated Titles</h2>
+            <div class="results-grid" id="results-grid">
+                <!-- Javascript will inject cards here -->
+            </div>
+        </section>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
