@@ -6,29 +6,22 @@ from model import generate_titles_makemore
 app = Flask(__name__)
 
 def filter_titles(titles_data):
-    """
-    Applies automatic filters to the generated titles list.
-    """
+    
     filtered = []
     seen = set()
     
     for item in titles_data:
         title = item["title"]
-        
-        # 1. Trim extra spaces & capitalize words automatically (Title Case)
-        # Assuming you want to capitalize words nicely, string.title() works for English mockups.
+              
         clean_title = " ".join(title.split()).title()
-        
-        # 2. Check length (4 to 60 characters)
+       
         if len(clean_title) < 4 or len(clean_title) > 60:
             continue
-            
-        # 3. Check repeated words
+        
         words = clean_title.lower().split()
         if len(words) != len(set(words)):
             continue
-            
-        # 4. Remove duplicates
+      
         if clean_title.lower() in seen:
             continue
             
@@ -51,14 +44,11 @@ def generate():
     prefix = data.get('prefix', '').strip()
     temperature = float(data.get('temperature', 0.8))
     num_titles = int(data.get('num_titles', 5))
-    
-    # 1. Generate (Mock up)
+  
     generated = generate_titles_makemore(prefix, temperature, num_titles * 2) 
-    
-    # 2. Filter
+   
     filtered = filter_titles(generated)
-    
-    # 3. Return the exact requested count
+   
     final_titles = filtered[:num_titles]
     
     return jsonify({
@@ -81,7 +71,7 @@ def compare():
     compare_results = []
     
     for mode_name, temp in modes.items():
-        # Generate enough to make sure we find one that passes the filter
+       
         generated = generate_titles_makemore(prefix, temp, 5)
         filtered = filter_titles(generated)
         
