@@ -7,9 +7,8 @@ import math
 BLOCK_SIZE = 3
 MODEL_PATH = "model.pt"
 VOCAB_PATH = "vocab.pt"
-MODEL_VERSION = 2  # bump to force retrain after hyperparameter changes
+MODEL_VERSION = 2  
 
-# Training hyperparameters (tuned from mlp.ipynb review)
 EMBED_DIM = 15
 N_HIDDEN = 300
 BATCH_SIZE = 64
@@ -19,7 +18,7 @@ LR_DECAY_EVERY = 25000
 LR_DECAY_FACTOR = 0.5
 MAX_GEN_LEN = 50
 
-# Global variables for model state
+
 stoi = {}
 itos = {}
 c, w1, b1, w2, b2, bngain, bnbias, bnmean_running, bnstd_running = [None]*9
@@ -145,7 +144,7 @@ def load_or_train():
 
 
 def generate_titles_makemore(prefix, temperature, num_titles):
-    """Generates titles using the Makemore MLP architecture."""
+   
     results = []
     temp = max(0.1, float(temperature))
 
