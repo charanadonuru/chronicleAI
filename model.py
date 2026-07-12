@@ -190,5 +190,5 @@ def generate_titles_makemore(prefix, temperature, num_titles):
     return results
 
 
-# Load weights on startup
+
 load_or_train()
