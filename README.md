@@ -7,7 +7,7 @@ ChronicleAI is a local AI-powered web application that generates creative novel 
 ---
 
 ## Demo
-
+  <img src="assets/img6.png" alt="Chronicle" width="200"/>
 ![ChronicleAI Demo](assets/demo.gif)
 
 ---
