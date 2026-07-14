@@ -13,7 +13,13 @@ ChronicleAI is a local AI-powered web application that generates creative novel 
 ![ChronicleAI Demo](assets/demo.gif)
 
 ---
+## Live Demo
 
+🌐 **Try ChronicleAI online:**
+
+https://chronicleai.onrender.com/
+
+> **Note:** The application is hosted on Render's free tier. The first request after a period of inactivity may take up to a minute while the server wakes up.
 ## Getting Started
 
 These instructions will help you set up ChronicleAI on your local machine for development and testing.
