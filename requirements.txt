@@ -104,8 +104,6 @@ python-dateutil==2.9.0.post0
 python-dotenv==1.2.1
 python-json-logger==4.1.0
 python-multipart==0.0.22
-pywin32==311
-pywinpty==3.0.4
 PyYAML==6.0.3
 pyzmq==27.1.0
 referencing==0.37.0
